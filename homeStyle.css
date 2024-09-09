@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the navbar horizontally */
+    width: 90%; /* Auto width to fit content */
+    border-radius: 15px; /* Round the borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Navbar list styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar list items */
+nav li {
+    margin-right: 20px;
+}
+
+/* Navbar links */
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navbar link hover effect */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar image */
+nav img {
+    height: 50px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.begin {
+    position: relative; /* Make this container relative for the overlay */
+    overflow: hidden; /* Hide any overflow */
+    width: 100vw; 
+}
+
+.begin img {
+    width: 100%; 
+    display: block; 
+}
+
+.begin::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgb(8, 8, 8) 90%);
+    pointer-events: none;
+}
+
+.begin h1 {
+    position: absolute;
+    bottom: 20px; /* Adjust this value to move the text higher or lower */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    color: white; /* Make the text white */
+    font-size: 2rem; /* Adjust text size */
+    text-align: center;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.section-left, .section-right {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: flex-start; /* Aligns items to the top */
+}
+
+.text-container {
+    width: 40%;
+    display: block; /* Makes sure the "About" text and paragraph stack */
+}
+
+.section-left .about-text {
+    margin-top: 12%;
+    margin-left: 30%;
+    margin-bottom: 10px; 
+    font-size: 30px;
+}
+
+.section-left .text{
+    margin: 20px;
+    margin-top: 8%;
+    font-size: 20px;
+}
+
+.section-right .text {
+    margin: 20px;
+    margin-top: 30%;
+    font-size: 20px;
+}
+
+
+.section-left .image {
+    margin-top: 5%;
+    width: 60%;
+}
+
+.section-right .image {
+    margin-top: 5%;
+    width: 60%;
+}
+
+.section-left img, .section-right img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-container {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.desk-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 47%; 
+    left: 14%;  
+    text-align: center;
+}
+
+.overlay:nth-child(3) {
+    left: 50.5%; 
+}
+
+.overlay-img {
+    width: 525px;  
+    height: auto;
+    border: 5px solid black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-img:hover{
+    transform: scale(1.02);
+}
+
+.overlay-text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

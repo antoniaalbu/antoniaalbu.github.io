@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the navbar horizontally */
+    width: 90%; /* Auto width to fit content */
+    border-radius: 15px; /* Round the borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Navbar list styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar list items */
+nav li {
+    margin-right: 20px;
+}
+
+/* Navbar links */
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navbar link hover effect */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar image */
+nav img {
+    height: 50px;
+}
+
+.expertise img {
+    width: 100%; 
+    height: auto;
+}
+
+.expertise h1 {
+    position: absolute;
+    bottom: 420px; /* Adjust this value to move the text higher or lower */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    color: white; /* Make the text white */
+    font-size: 70px; /* Adjust text size */
+    text-align: center;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.expertise .text {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: left;
+    margin-top: 5%;
+}
+
+.expertise .text p {
+    margin-bottom: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.descriptions {
+    color: white;
+}
+
+.descriptions ul {
+    list-style-type: none;
+}
+
+.descriptions h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.descriptions h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.descriptions p {
+    font-size: 1.1rem;
+}
+
+.descriptions .computer_networks {
+    margin-top: 5%;
+    background-color: #03349b;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.descriptions .computer_networks .text {
+    width: 30%; 
+    margin-left: 30px;
+}
+
+.descriptions .computer_networks .image {
+    width: 65%;
+    text-align: right; 
+}
+
+.descriptions img {
+    width: 100%;
+    height: auto;
+}
+
+.descriptions .ai {
+    margin-top: 10%;
+    background-color: #a9dae8;
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space between image and text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 40px; /* Add some space below this section */
+}
+
+.descriptions .ai img {
+    width: 60%; /* Adjust width as needed */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.descriptions .ai .text {
+    width: 30%; 
+    margin-right: 50px;
+}
+
+.descriptions .ai h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.descriptions .ai h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.descriptions .ai p {
+    font-size: 1.1rem;
+}
+
+.descriptions .erp {
+    margin-top: 10%;
+    background-color: #23485c; /* Same background color as Computer Networks */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.descriptions .erp .text {
+    width: 30%;
+    margin-left: 30px;
+    color: white;
+}
+
+.descriptions .erp .image {
+    width: 65%;
+    text-align: right;
+}
+
+.descriptions .erp img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.descriptions .web_development {
+    margin-top: 10%;
+    background-color: #448ea8; /* Same background color as AI */
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space between image and text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 40px; /* Add some space below this section */
+}
+
+.descriptions .web_development img {
+    width: 60%; /* Adjust width as needed */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.descriptions .web_development .text {
+    width: 30%; 
+    margin-right: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.descriptions .web_development h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.descriptions .web_development h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.descriptions .web_development p {
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
