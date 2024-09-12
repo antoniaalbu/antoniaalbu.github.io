@@ -81,6 +81,10 @@ p {
 }
 
 @media (max-width: 480px) {
+    body, html {
+        background: url('images/homePage/sensor1_vertical.png') no-repeat center center fixed;
+        background-size: cover;
+    }
     h1 {
         font-size: 2em;
     }
