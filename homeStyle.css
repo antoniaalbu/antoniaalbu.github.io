@@ -101,7 +101,7 @@ body {
     justify-content: center; /* Center align horizontally if needed */
     position: absolute;
     top: 190%; /* Adjust this value to position it correctly */
-    left: 50%;
+    left: 11%;
     transform: translateX(-50%);
     text-decoration: none;
     color: white;
@@ -358,7 +358,7 @@ footer {
     
     .scroll-down-more span {
         font-size: 15px;
-        margin-right: 2px; /* Reduced margin to bring text closer to the arrow */
+        margin-right: 2px; 
     }
     
     .scroll-down-more::before {
