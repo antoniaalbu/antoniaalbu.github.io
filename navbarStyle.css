@@ -54,3 +54,42 @@ nav a:hover::after {
 nav img {
     height: 50px;
 }
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 10px 0; /* Adjust vertical margin for list items */
+    }
+
+    nav img {
+        height: 35px; /* Smaller logo for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-around; /* Distribute space evenly between items */
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0 10px; /* Horizontal spacing between items */
+    }
+    nav a {
+        font-size: 0.8rem; /* Smaller font size for mobile devices */
+    }
+
+    nav img {
+        height: 20px; /* Smaller logo for mobile devices */
+    }
+}

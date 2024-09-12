@@ -12,7 +12,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
-     scroll-behavior: smooth;
 }
 
 .main {
@@ -34,7 +33,6 @@ body {
     animation: fadeIn 3s forwards;
 }
 
-
 @keyframes fadeIn {
     from {
         opacity: 0; 
@@ -43,7 +41,6 @@ body {
         opacity: 1; 
     }
 }
-
 
 .begin {
     position: relative; 
@@ -80,7 +77,6 @@ body {
     z-index: 1;
 }
 
-
 .scroll-down {
     display: flex;
     flex-direction: column;
@@ -96,16 +92,16 @@ body {
     z-index: 2;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+}
 
-  .scroll-down-more {
+.scroll-down-more {
     display: flex;
     flex-direction: row; /* Align items horizontally */
     align-items: center; /* Vertically center align the text and arrow */
     justify-content: center; /* Center align horizontally if needed */
     position: absolute;
     top: 190%; /* Adjust this value to position it correctly */
-    left: 9.5%;
+    left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
     color: white;
@@ -115,7 +111,7 @@ body {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-  .scroll-down::before{
+.scroll-down::before {
     content: '';
     height: 2vw;
     width: 2vw;
@@ -125,14 +121,14 @@ body {
     transform: rotate(45deg);
     transition: border-width 150ms ease-in-out;
     margin-bottom: 10px; 
-  }
+}
 
-  .scroll-down-more span {
+.scroll-down-more span {
     font-size: 1rem;
     margin-right: 30px; 
 }
 
-  .scroll-down-more::before {
+.scroll-down-more::before {
     content: '';
     height: 1vw;
     width: 1vw;
@@ -143,14 +139,13 @@ body {
     transition: border-width 150ms ease-in-out;
     margin-bottom: 10px; 
     margin-right: 30px;
-  }
+}
 
-  
-  .scroll-down:hover::before,
-  .scroll-down-more:hover::before{
+.scroll-down:hover::before,
+.scroll-down-more:hover::before {
     border-bottom-width: 4px;
     border-right-width: 4px;
-  }
+}
 
 .scroll-down span {
     font-size: 1rem;
@@ -160,7 +155,6 @@ body {
 
 .scroll-down:hover span {
     transform: scale(1.2); 
-    
 }
 
 .section-left, .section-right {
@@ -182,7 +176,7 @@ body {
     font-size: 30px;
 }
 
-.section-left .text{
+.section-left .text {
     margin: 70px;
     margin-top: 12%;
     font-size: 20px;
@@ -193,7 +187,6 @@ body {
     margin-top: 42.5%;
     font-size: 20px;
 }
-
 
 .section-left .image {
     margin-top: 10%;
@@ -241,7 +234,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.overlay-img:hover{
+.overlay-img:hover {
     transform: scale(1.02);
 }
 
@@ -256,3 +249,206 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .fade-in-text {
+        top: 30%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        font-size: 35px; 
+    }
+
+    .begin h1 {
+        font-size: 1.5rem; 
+        bottom: 10%; 
+    }
+
+    .scroll-down {
+        top: 70%; 
+        font-size: 1.5rem;
+    }
+
+    .scroll-down-more {
+        top: 120%; 
+        font-size: 1.2rem;
+    }
+
+    .section-left, .section-right {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .section-left .about-text {
+        margin-left: 10%;
+        font-size: 25px;
+    }
+
+    .section-left .text, .section-right .text {
+        margin: 30px;
+        font-size: 18px;
+    }
+
+    .section-left .image, .section-right .image {
+        width: 80%;
+    }
+
+    .scroll-down-more span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fade-in-text {
+        font-size: 18px; 
+        text-align: center; /* Center align the text */
+        position: absolute;
+        top: 45%; /* Adjusted to fit better on smaller screens */
+        left: 24%;
+        transform: translate(-50%, -50%);
+    }
+
+    .begin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        width: 100vw;
+        height: 35vh;
+    }
+
+    .begin img {
+        width: 130%;
+        height: 130;
+    }
+
+    .begin h1 {
+        font-size: 1rem; 
+        position: absolute;
+        bottom: 15%; 
+        left: 50%;
+        transform: translateX(-50%);
+        color: white; /* Ensure the text is visible */
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .scroll-down {
+        position: absolute; 
+        top: 90%; 
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        text-align: center;
+        color: white; /* Ensure the text is visible */
+    }
+
+    .scroll-down-more {
+        position: absolute;
+        top: 99%; /* Adjust position as needed */
+        left: 20%; /* Center horizontally */
+        transform: translateX(-50%); /* Center the element */
+        font-size: 8px;
+        text-align: flex-start;
+        color: white;
+     
+    }
+    
+    .scroll-down-more span {
+        font-size: 15px;
+        margin-right: 2px; /* Reduced margin to bring text closer to the arrow */
+    }
+    
+    .scroll-down-more::before {
+        content: '';
+        height: 10px; /* Adjust size to fit better */
+        width: 10px;
+        border-style: solid;
+        border-color: white;
+        border-width: 0 2px 2px 0; /* Adjust width to fit better */
+        transform: rotate(-45deg);
+        transition: border-width 150ms ease-in-out;
+    
+    }
+    
+
+    .section-left, .section-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Adjust height based on content */
+        box-sizing: border-box;
+    }
+
+    .text-container{
+        width: 95%;
+    }
+
+    .section-left .about-text{
+        text-align: center;
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    .section-left .text, .section-right .text {
+        text-align: left;
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .section-left .image{
+        width: 100%;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .section-right .image {
+        width: 100%;
+        display: block;
+        margin-top: 100px;
+    }
+
+    .overlay-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .desk-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .overlay {
+        position: absolute;
+        bottom: 44%; 
+        left: 14%;  
+        text-align: center;
+    }
+    
+    .overlay:nth-child(3) {
+        left: 50.5%; 
+    }
+    
+    .overlay-img {
+        width: 125px;  
+        height: auto;
+        border: 2px solid black;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .overlay-img:hover {
+        transform: scale(1.02);
+    }
+    
+    .overlay-text {
+        color: white;
+        font-size: 12px;
+    }
+}
+
