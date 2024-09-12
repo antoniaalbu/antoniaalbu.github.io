@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expertise - IT Company</title>
+    <title>SENSOR Expertise</title>
+	<link rel="icon" href="sensor.png" type="image/png">
 	<link rel="stylesheet" href="expertiseStyle.css">
+	<link rel="stylesheet" href="navbarStyle.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="home.htm"><img src="sensor.jpg" alt="Company Logo" style="height: 50px;"></a></li>
+            <li><a href="home.html"><img src="sensor.jpg" alt="Company Logo" style="height: 50px;"></a></li>
             <li><a href="expertise.html">Expertise</a></li>
             <li><a href="projects.html">Projects</a></li>
+			<li><a href="projects1.html">Projects Trial</a></li>
             <li><a href="contact.html">Contact</a></li>
+			
         </ul>
     </nav>
-    <div class="expertise">
-		<img src="images/expertise/main_photo.jpg" alt="Expertise">
-		<h1>Our Expertise</h1>
+	<div class="expertise">
+		<img src="images/expertise/main_photo2.webp" alt="Expertise">
+		<h1 id="expertise-top">Our Expertise</h1>
+			<div class="anchor-links">
+				<a href="#computer-networks">Computer Networks</a>
+				<a href="#ai">Artificial Intelligence</a>
+				<a href="#erp">ERP Solutions</a>
+				<a href="#web-development">Web Development</a>
+			</div>
 		<div class="text">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a leo mauris. Morbi sed placerat lacus, id tincidunt lectus. Mauris non nunc at magna dapibus pretium in id libero. Donec lacinia nec diam in dignissim. Mauris quis arcu ultricies, scelerisque odio et, finibus ligula. Nam ut aliquet felis, vitae bibendum arcu. Suspendisse potenti. Suspendisse augue ex, laoreet non vehicula ac, commodo non ex. Sed vitae est in magna dignissim interdum. Phasellus eu justo maximus, eleifend metus in, blandit enim. Nunc quis rutrum erat. Cras porttitor pulvinar pellentesque. Nunc eleifend congue tellus, eget porttitor ligula accumsan a. Ut congue efficitur risus id euismod. Suspendisse imperdiet rutrum eros, eu vulputate lorem interdum id. Mauris dolor justo, ornare at nisi sit amet, mattis tempor arcu. Nullam auctor imperdiet elementum. Donec varius tellus a felis mollis, eget eleifend enim pulvinar. Nunc tempus enim quam, et sagittis diam porttitor eu. In vitae gravida nunc, id molestie ligula. Praesent venenatis arcu elit, ac vestibulum nibh luctus fringilla. Etiam volutpat molestie vehicula. Aenean sed purus sit amet nibh viverra faucibus.</p>
+			<p id="expertise-paragraph">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a leo mauris. Morbi sed placerat lacus, id tincidunt lectus. Mauris non nunc at magna dapibus pretium in id libero. Donec lacinia nec diam in dignissim. Mauris quis arcu ultricies, scelerisque odio et, finibus ligula. Nam ut aliquet felis, vitae bibendum arcu. Suspendisse potenti. Suspendisse augue ex, laoreet non vehicula ac, commodo non ex. Sed vitae est in magna dignissim interdum. Phasellus eu justo maximus, eleifend metus in, blandit enim. Nunc quis rutrum erat. Cras porttitor pulvinar pellentesque. Nunc eleifend congue tellus, eget porttitor ligula accumsan a. Ut congue efficitur risus id euismod. Suspendisse imperdiet rutrum eros, eu vulputate lorem interdum id. Mauris dolor justo, ornare at nisi sit amet, mattis tempor arcu. Nullam auctor imperdiet elementum. Donec varius tellus a felis mollis, eget eleifend enim pulvinar. Nunc tempus enim quam, et sagittis diam porttitor eu. In vitae gravida nunc, id molestie ligula. Praesent venenatis arcu elit, ac vestibulum nibh luctus fringilla. 
+			</p>
 		</div>
 	</div>
 	<div class="descriptions">
         <ul>
-            <li>
+            <li id="computer-networks">
 				<div class="computer_networks">
 					<div class="text">
 						<h2>Computer Networks</h2>
@@ -36,7 +48,7 @@
 					</div>
 				</div>
 				</li>
-            <li>
+			<li id="ai">
 				<div class="ai">
 					<img src="images/expertise/ai.jpeg" alt="AI">
 					<div class="text">
@@ -46,7 +58,7 @@
 					</div>
 			</div>
 			</li>
-            <li>
+            <li id="erp">
 				<div class="erp">
 					<div class="text">
 						<h2>ERP Solutions</h2>
@@ -57,7 +69,7 @@
 						<img src="images/expertise/erp.webp" alt="ERP">
 					</div>
 				</div>				
-            <li>
+			<li id="web-development">
 					<div class="web_development">
 						<img src="images/expertise/web_development.jpg" alt="Web Development">
 						<div class="text">

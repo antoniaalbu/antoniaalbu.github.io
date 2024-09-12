@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,66 +14,68 @@ body {
     color: #fff;
 }
 
-nav {
-    background-color: black;
-    color: white;
-    padding: 10px 20px; /* Adjust padding as needed */
-    position: fixed; /* Make the navbar fixed at the top */
-    top: 2%;
-    left: 50%;
-    transform: translateX(-50%); /* Center the navbar horizontally */
-    width: 90%; /* Auto width to fit content */
-    border-radius: 15px; /* Round the borders */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-    z-index: 1000; /* Ensure it stays above other content */
-}
-
-/* Navbar list styling */
-nav ul {
-    list-style: none;
+.anchor-links {
+    position: absolute;
+    bottom: 40%; 
+    left: 15.5%;
+    transform: translateX(-50%);
     display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    flex-direction: column; 
+    z-index: 2;
 }
 
-/* Navbar list items */
-nav li {
-    margin-right: 20px;
-}
-
-/* Navbar links */
-nav a {
-    color: white;
+.anchor-links a {
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
 }
 
-/* Navbar link hover effect */
-nav a:hover {
-    text-decoration: underline;
+.anchor-links a:hover {
+    color: #000000;
+    transform: scale(1.1);
 }
 
-/* Navbar image */
-nav img {
-    height: 50px;
+
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .expertise img {
     width: 100%; 
     height: auto;
+    animation: fadeInFromTop 2s ease-out; 
 }
 
 .expertise h1 {
     position: absolute;
-    bottom: 420px; /* Adjust this value to move the text higher or lower */
-    left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
-    color: white; /* Make the text white */
-    font-size: 70px; /* Adjust text size */
+    bottom: 70%; 
+    left: 23.5%;
+    transform: translateX(-50%); 
+    color: white; 
+    font-size: 70px; 
     text-align: center;
     padding: 10px 20px;
     z-index: 1;
 }
+
+.expertise-link {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.expertise-link:hover h1 {
+    text-decoration: underline; 
+}
+
 
 .expertise .text {
     font-size: 1.1rem;
@@ -90,6 +96,10 @@ nav img {
 
 .descriptions ul {
     list-style-type: none;
+}
+
+.descriptions li {
+    scroll-margin-top: 13vh; 
 }
 
 .descriptions h2 {
@@ -122,6 +132,7 @@ nav img {
 
 .descriptions .computer_networks .image {
     width: 65%;
+    height: auto;
     text-align: right; 
 }
 
@@ -132,16 +143,16 @@ nav img {
 
 .descriptions .ai {
     margin-top: 10%;
-    background-color: #a9dae8;
+    background-color: #5a9ac6;
     display: flex;
-    align-items: center; /* Align items vertically centered */
-    justify-content: space-between; /* Space between image and text */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    margin-bottom: 40px; /* Add some space below this section */
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin-bottom: 40px; 
 }
 
 .descriptions .ai img {
-    width: 60%; /* Adjust width as needed */
+    width: 60%; 
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -167,7 +178,7 @@ nav img {
 
 .descriptions .erp {
     margin-top: 10%;
-    background-color: #23485c; /* Same background color as Computer Networks */
+    background-color: #23485c; 
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -193,16 +204,16 @@ nav img {
 
 .descriptions .web_development {
     margin-top: 10%;
-    background-color: #448ea8; /* Same background color as AI */
+    background-color: #448ea8;
     display: flex;
-    align-items: center; /* Align items vertically centered */
-    justify-content: space-between; /* Space between image and text */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    margin-bottom: 40px; /* Add some space below this section */
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin-bottom: 40px; 
 }
 
 .descriptions .web_development img {
-    width: 60%; /* Adjust width as needed */
+    width: 60%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

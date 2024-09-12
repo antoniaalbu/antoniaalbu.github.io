@@ -1,64 +1,18 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
 }
 
-nav {
-    background-color: black;
-    color: white;
-    padding: 10px 20px; /* Adjust padding as needed */
-    position: fixed; /* Make the navbar fixed at the top */
-    top: 2%;
-    left: 50%;
-    transform: translateX(-50%); /* Center the navbar horizontally */
-    width: 90%; /* Auto width to fit content */
-    border-radius: 15px; /* Round the borders */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-    z-index: 1000; /* Ensure it stays above other content */
-}
-
-/* Navbar list styling */
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar list items */
-nav li {
-    margin-right: 20px;
-}
-
-/* Navbar links */
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Navbar link hover effect */
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Navbar image */
-nav img {
-    height: 50px;
-}
-
-/* Contact section styling */
 .contact {
-    position: relative; /* Make this container a positioned element */
+    position: relative;
     background-color: black;
     color: white;
     padding: 20px;
@@ -74,13 +28,13 @@ nav img {
 }
 
 .contact .content {
-    position: absolute; /* Position this container absolutely within the .contact */
-    top: 30%; /* Adjust as needed */
-    left: 48.5%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center vertically */
-    z-index: 1; /* Ensure it's above the image */
-    width: 40%;
-    padding: 0 20px; /* Optional padding to avoid text touching the edges */
+    position: absolute; 
+    top: 40%; 
+    left: 48.5%; 
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    width: 38%;
+    padding: 0 20px; 
     text-align: center;
 }
 

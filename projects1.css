@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the Power Button Image and Typewriter Text */
+.container {
+    position: absolute; /* Position it absolutely to cover the entire viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it both horizontally and vertically */
+    z-index: 1; /* Ensure power button is on top initially */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+}
+
+/* Power Button Image Styling */
+.power-button {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.power-button:hover {
+    transform: scale(1.1);
+}
+
+/* Typewriter Effect */
+.typewriter p {
+    color: white;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid white; /* Cursor */
+    animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(83, 166, 255); }
+}
+
+/* Hidden Overlay Image (Initially hidden) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    display: flex; /* Use flex to center the image */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it appears above other elements */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Fade-in effect */
+    visibility: hidden; /* Also hide visibility initially */
+}
+
+/* Popup Image Styling */
+.popup-image {
+    width: 100%; /* Adjust size as needed */
+    height: auto;
+    transform: scale(0.8); /* Initial scale for zoom effect */
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+/* Show the overlay when #showImage is targeted */
+#showImage:target {
+    opacity: 1; /* Make overlay visible */
+    visibility: visible; /* Ensure it is visible */
+}
+
+#showImage:target .popup-image {
+    transform: scale(1); /* Zoom in effect */
+}

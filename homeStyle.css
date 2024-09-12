@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,50 +12,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
-}
-
-nav {
-    background-color: black;
-    color: white;
-    padding: 10px 20px; /* Adjust padding as needed */
-    position: fixed; /* Make the navbar fixed at the top */
-    top: 2%;
-    left: 50%;
-    transform: translateX(-50%); /* Center the navbar horizontally */
-    width: 90%; /* Auto width to fit content */
-    border-radius: 15px; /* Round the borders */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-    z-index: 1000; /* Ensure it stays above other content */
-}
-
-/* Navbar list styling */
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar list items */
-nav li {
-    margin-right: 20px;
-}
-
-/* Navbar links */
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Navbar link hover effect */
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Navbar image */
-nav img {
-    height: 50px;
+     scroll-behavior: smooth;
 }
 
 .main {
@@ -61,10 +22,34 @@ nav img {
     padding: 20px 0;
 }
 
+.fade-in-text {
+    position: absolute;
+    top: 35%; 
+    left: 20%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px; 
+    color: white;
+    opacity: 0; 
+    animation: fadeIn 3s forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+
 .begin {
-    position: relative; /* Make this container relative for the overlay */
-    overflow: hidden; /* Hide any overflow */
-    width: 100vw; 
+    position: relative; 
+    overflow: hidden; 
+    width: 100vw;
+    height: 100vh; 
 }
 
 .begin img {
@@ -79,61 +64,144 @@ nav img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgb(8, 8, 8) 90%);
+    background: linear-gradient(to bottom, rgba(135, 129, 129, 0) 30%, rgb(8, 8, 8) 90%);
     pointer-events: none;
 }
 
 .begin h1 {
     position: absolute;
-    bottom: 20px; /* Adjust this value to move the text higher or lower */
+    bottom: 20%; 
     left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
-    color: white; /* Make the text white */
-    font-size: 2rem; /* Adjust text size */
+    transform: translateX(-50%); 
+    color: white; 
+    font-size: 2rem; 
     text-align: center;
     padding: 10px 20px;
     z-index: 1;
+}
+
+
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    top: 82%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .scroll-down-more {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center; /* Vertically center align the text and arrow */
+    justify-content: center; /* Center align horizontally if needed */
+    position: absolute;
+    top: 190%; /* Adjust this value to position it correctly */
+    left: 9.5%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+  .scroll-down::before{
+    content: '';
+    height: 2vw;
+    width: 2vw;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    margin-bottom: 10px; 
+  }
+
+  .scroll-down-more span {
+    font-size: 1rem;
+    margin-right: 30px; 
+}
+
+  .scroll-down-more::before {
+    content: '';
+    height: 1vw;
+    width: 1vw;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(-45deg);
+    transition: border-width 150ms ease-in-out;
+    margin-bottom: 10px; 
+    margin-right: 30px;
+  }
+
+  
+  .scroll-down:hover::before,
+  .scroll-down-more:hover::before{
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+
+.scroll-down span {
+    font-size: 1rem;
+    margin-top: 20%;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.scroll-down:hover span {
+    transform: scale(1.2); 
+    
 }
 
 .section-left, .section-right {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-    align-items: flex-start; /* Aligns items to the top */
+    align-items: flex-start; 
 }
 
 .text-container {
     width: 40%;
-    display: block; /* Makes sure the "About" text and paragraph stack */
+    display: block; 
 }
 
 .section-left .about-text {
-    margin-top: 12%;
-    margin-left: 30%;
+    margin-top: 30%;
+    margin-left: 35%;
     margin-bottom: 10px; 
     font-size: 30px;
 }
 
 .section-left .text{
-    margin: 20px;
-    margin-top: 8%;
+    margin: 70px;
+    margin-top: 12%;
     font-size: 20px;
 }
 
 .section-right .text {
     margin: 20px;
-    margin-top: 30%;
+    margin-top: 42.5%;
     font-size: 20px;
 }
 
 
 .section-left .image {
-    margin-top: 5%;
+    margin-top: 10%;
     width: 60%;
 }
 
 .section-right .image {
-    margin-top: 5%;
+    margin-top: 8%;
     width: 60%;
 }
 

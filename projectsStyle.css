@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,106 +5,84 @@
 }
 
 body {
-    background-image: url('images/projects/projectBackground.jpg'); 
     background-color: black;
-    background-size: cover; /* Ensure the background covers the entire page */
-    background-position: center; /* Center the background image */
-    background-attachment: scroll; /* Scroll with the content */
-    background-repeat: no-repeat; /* Prevent repeating */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 300vh; /* Ensure body covers the full viewport height */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 300vh; 
+    overflow-x: hidden;
+    position: relative;
 }
 
-nav {
-    background-color: black;
-    color: white;
-    padding: 10px 20px; /* Adjust padding as needed */
-    position: fixed; /* Make the navbar fixed at the top */
-    top: 2%;
-    left: 50%;
-    transform: translateX(-50%); /* Center the navbar horizontally */
-    width: 90%; /* Auto width to fit content */
-    border-radius: 15px; /* Round the borders */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-    z-index: 1000; /* Ensure it stays above other content */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/projects/projectBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    z-index: -1; 
+    opacity: 0; 
+    animation: fadeInFromTop 2s ease-out forwards;
 }
 
-/* Navbar list styling */
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar list items */
-nav li {
-    margin-right: 20px;
-}
-
-/* Navbar links */
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Navbar link hover effect */
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Navbar image */
-nav img {
-    height: 50px;
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
 }
 
 h1 {
     position: absolute;
-    top: 40%; /* Adjust this value to control how high or low the title appears */
-    left: 50%; /* Align the left edge at the center of the screen */
-    transform: translateX(-50%); /* Move it back by half its width to fully center it */
-    font-size: 100px; /* Adjust the font size as needed */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the text */
-    text-align: center; /* Center the text inside the box */
-    z-index: 1; /* Ensure it's above other elements */
+    top: 13%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 100px; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    z-index: 1; 
 }
 
 .projects {
-    padding-top: 57%; /* Add padding to move the entire content down */
+    padding-top: 57%;
 }
 
 .projects ul {
-    list-style-type: none; /* Remove default list styling */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
 }
 
 .projects li {
-    margin-bottom: 235px; /* Add space between projects */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Center items horizontally */
+    margin-bottom: 235px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .projects .text {
-    width: 70%; /* Adjust width as needed */
-    padding: 20px; /* Add padding around the text */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    width: 70%; 
+    padding: 20px; 
+    box-sizing: border-box; 
     color: white;
 }
 
-/* Left style: text on the left, align with the right side */
 .projects .left-style {
     flex-direction: row; 
     margin-left: 40%;
 }
 
-/* Right style: text on the right, align with the left side */
 .projects .right-style {
     flex-direction: row-reverse; 
     margin-right: 50%;

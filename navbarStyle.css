@@ -1,0 +1,56 @@
+/* Navbar Styling */
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 20px; 
+    position: fixed; 
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 90%; 
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1001; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+    position: relative; /* Necessary for absolute positioning of the underline */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    position: relative; /* Necessary for positioning the pseudo-element */
+    padding-bottom: 5px; /* Adjust space for the underline */
+}
+
+/* Smooth Underline Effect */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background: rgb(83, 166, 255); /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+/* Show the underline on hover */
+nav a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Image Styling */
+nav img {
+    height: 50px;
+}
