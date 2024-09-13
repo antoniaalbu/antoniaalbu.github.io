@@ -97,3 +97,45 @@ body, html {
 #showImage:target .popup-image {
     transform: scale(1); /* Zoom in effect */
 }
+
+/* Folder Container to hold all folders */
+.folder-container {
+    position: absolute;
+    top: 20%; /* Adjust this to control vertical placement */
+    left: 6%; /* Adjust this to control horizontal placement */
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap; /* Allow folders to wrap on smaller screens */
+    gap: 50px; /* Add space between folders */
+}
+
+
+.folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+.folder img {
+    width: 70px; 
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.folder img:hover{
+    transform: scale(1.1);
+}
+
+.folder p {
+    color: white;
+    font-size: 16px; /* Adjust text size */
+    margin-top: 10px;
+}
+
+
+
+
