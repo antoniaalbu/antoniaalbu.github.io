@@ -238,6 +238,26 @@ body {
     font-size: 1.1rem;
 }
 
+.back-to-top {
+    position: absolute;
+    top: 460%;
+    left: 66.5%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.back-to-top a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-to-top a:hover {
+    color: #000000; 
+}
+
 footer {
     background-color: black;
     color: white;
